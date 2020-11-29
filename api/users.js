@@ -18,7 +18,7 @@ router .post('/', (req,res) =>{
         .then(() => res.json({
             "message": "Created account successfully"
         }))
-        .catch(err => alert(err))
+        .catch(err => console.log(err))
         
 })
 module.exports = router
