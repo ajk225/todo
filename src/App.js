@@ -35,7 +35,8 @@ const App = function () {
         alert("Account created successfully");
         window.location.reload();
       })
-      .catch(function () {
+      .catch(function (error) {
+        console.log(error);
         alert("Could not create account");
       });
   }
