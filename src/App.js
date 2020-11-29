@@ -28,6 +28,8 @@ const App = function () {
 
 
   function submitForm() {
+    console.log(username);
+    console.log(email)
     if (username === "") {
       alert("Please fill the username field");
       return;
