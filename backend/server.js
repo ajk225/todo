@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 require('./database');
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
