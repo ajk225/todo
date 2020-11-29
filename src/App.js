@@ -17,9 +17,12 @@ const App = function () {
 
   }, []);
   function handleEmailChange(e) {
+    console.log(e.target.value);
     setEmail(e.target.value);
+    console.log("WHAT");
   }
   function handleUsernameChange(e) {
+    console.log(e.target.value);
     setUsername(e.target.value);
   }
 
