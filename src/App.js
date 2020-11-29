@@ -17,7 +17,7 @@ const App = function () {
 
   }, []);
 
-  function submitForm() {
+  function submitForm(e) {
     if (username === "") {
       alert("Please fill the username field");
       return;
@@ -60,12 +60,12 @@ const App = function () {
       )}
       <form onSubmit={submitForm}>
         <input 
-          onChange={setusername(e.target.value)}
+          onChange={(e) => setusername(e.target.value)}
           type = "text"
           placeholder = "Enter your username"
         />
         <input 
-          onChange={setEmail(e.target.value)}
+          onChange={(e) = setEmail(e.target.value)}
           type = "text"
           placeholder="Enter your email address"
         />
