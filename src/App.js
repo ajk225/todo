@@ -60,12 +60,12 @@ const App = function () {
       )}
       <form onSubmit={submitForm}>
         <input 
-          onChange={(e) => setusername(e.target.value)}
+          onChange={setusername(e.target.value)}
           type = "text"
           placeholder = "Enter your username"
         />
         <input 
-          onChange={(e) = setEmail(e.target.value)}
+          onChange={setEmail(e.target.value)}
           type = "text"
           placeholder="Enter your email address"
         />
