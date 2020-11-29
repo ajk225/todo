@@ -9,7 +9,7 @@ router.get('/api/users',(req,res) => {
         .catch(err => console.log(err))
 })
 
-router .post('/api/users', (req,res) =>{
+router.post('/api/users', (req,res) =>{
     const { name,email } = req.body;
     const newUser = new User({
         name: name, email: email
