@@ -16,11 +16,9 @@ router .post('/', (req,res) =>{
     })
     newUser.save()
         .then(() => res.json({
-            message: "Created account successfully"
+            "message": "Created account successfully"
         }))
-        .catch(err => res.status(400).json({
-            "error": err,
-            "message": "Error creating account"
-        }))
+        .catch(err => alert(err))
+        
 })
 module.exports = router
