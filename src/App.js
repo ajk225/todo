@@ -40,7 +40,7 @@ const App = function () {
     }
     axios
       .post("/api/users",{
-        username: username,
+        user: username,
         email: email,
       })
       .then(function () {
