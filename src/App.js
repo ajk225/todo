@@ -6,7 +6,7 @@ import './App.css';
 
 const App = function () {
   const [users, setUsers] = useState(null);
-  const [username, setusername] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   useEffect(() => {
     axios
@@ -17,7 +17,7 @@ const App = function () {
 
   }, []);
 
-  function submitForm(e) {
+  function submitForm() {
     if (username === "") {
       alert("Please fill the username field");
       return;
@@ -39,6 +39,7 @@ const App = function () {
         alert("Could not create account");
       });
   }
+  
   return (
     <>
       <h1>My Project</h1>
@@ -60,12 +61,12 @@ const App = function () {
       )}
       <form onSubmit={submitForm}>
         <input 
-          onChange={(e) => setusername(e.target.value)}
+          onChange={setUsername}
           type = "text"
           placeholder = "Enter your username"
         />
         <input 
-          onChange={(e) = setEmail(e.target.value)}
+          onChange={setEmail}
           type = "text"
           placeholder="Enter your email address"
         />
