@@ -16,10 +16,10 @@ const App = function () {
 
 
   }, []);
-  const handleEmailChange = e => {
+  function handleEmailChange(e) {
     setEmail(e.target.value);
   }
-  const handleUsernameChange = e => {
+  function handleUsernameChange(e) {
     setUsername(e.target.value);
   }
 
@@ -42,10 +42,10 @@ const App = function () {
         alert("Account created successfully");
         window.location.reload();
       })
-      .catch(function (error) {
-        console.log(error);
-        alert("Could not create account");
-      });
+      .catch((error) => {
+          console.log(error);
+          alert("Could not create account");
+        });
   }
   
   return (
