@@ -31,11 +31,11 @@ const App = function () {
         username: username,
         email: email,
       })
-      .then(function (){
+      .then(function () {
         alert("Account created successfully");
         window.location.reload();
       })
-      .catch(function (){
+      .catch(function () {
         alert("Could not create account");
       });
   }
