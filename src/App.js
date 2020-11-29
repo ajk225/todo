@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useImperativeHandle} from 'react'
+import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 
 import logo from './logo.svg';
@@ -16,6 +16,13 @@ const App = function () {
 
 
   }, []);
+  const handleEmailChange = e => {
+    setEmail(e.target.value);
+  }
+  const handleUsernameChange = e => {
+    setUsername(e.target.value);
+  }
+
 
   function submitForm() {
     if (username === "") {
@@ -62,12 +69,12 @@ const App = function () {
       )}
       <form onSubmit={submitForm}>
         <input 
-          onChange={setUsername}
+          onChange={handleUsernameChange}
           type = "text"
           placeholder = "Enter your username"
         />
         <input 
-          onChange={setEmail}
+          onChange={handleEmailChange}
           type = "text"
           placeholder="Enter your email address"
         />
