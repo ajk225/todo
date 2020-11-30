@@ -5,7 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 
 const App = function () {
-  const [users, setUsers] = useState(null);
+  const [users, setUsers] = useState([]);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   useEffect(() => {
