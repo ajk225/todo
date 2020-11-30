@@ -5,7 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 
 const App = function () {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([{}]);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   useEffect(() => {
@@ -13,8 +13,6 @@ const App = function () {
         .get("/api/users")
         .then((users) => setUsers(users))
         .catch((err) => console.log(err));
-
-
   }, []);
   function handleEmailChange(e) {
     console.log(e.target.value);
