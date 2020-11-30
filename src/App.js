@@ -62,7 +62,7 @@ const App = function () {
         <>
           <h2>Available Users</h2>
           <ol>
-            {JSON.parse(users).map((user, index) => (
+            {users.map((user, index) => (
               <li key={index}>
                 Name: {user.name} - Email: {user.email}
               </li>
