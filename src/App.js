@@ -5,7 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 
 const App = function () {
-  const [users, setUsers] = useState([{}]);
+  const [users, setUsers] = useState(null);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   useEffect(() => {
@@ -62,7 +62,7 @@ const App = function () {
         <>
           <h2>Available Users</h2>
           <ol>
-            {users.map((user, index) => (
+            {JSON.parse(users).map((user, index) => (
               <li key={index}>
                 Name: {user.name} - Email: {user.email}
               </li>
