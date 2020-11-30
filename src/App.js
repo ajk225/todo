@@ -62,6 +62,7 @@ const App = function () {
         <>
           <h2>Available Users</h2>
           <ol>
+            {console.log(users)}
             {users.map((user, index) => (
               <li key={index}>
                 Name: {user.name} - Email: {user.email}
