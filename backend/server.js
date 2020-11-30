@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const users = require('../api/users');
-app.use('/api/users',users);
+app.use('/api',users);
 
 var testAPIRouter = require("../api/testapi");
 app.use("/testAPI", testAPIRouter);
