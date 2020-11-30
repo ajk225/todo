@@ -12,6 +12,10 @@ app.use(cors());
 const users = require('../api/users');
 app.use('/api/users',users);
 
+var testAPIRouter = require("../api/testapi");
+app.use("/testAPI", testAPIRouter);
+
+
 app.use(express.static(path.join(__dirname,'../build')))
 app.get('*',(req,res) => {
     res.sendFile(path.join(__dirname,'../build'))
